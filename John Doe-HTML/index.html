@@ -3,6 +3,15 @@
 <head>
     <title>11a2 HTML project 2026</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
+     <script>
+        function openForm(){
+            document.getElementById("myForm").style.display = "block";
+        }
+         function closeForm(){
+            document.getElementById("myForm").style.display = "none";
+        }
+     </script>
 </head>
 <body>
      <header>
@@ -33,16 +42,13 @@
                     <li>
                         <a href="https://cia.gov"> HTML CIA</a>
                     <li>
-                        <a href="https://usn.gov">HTML táblázat</a>
-                    </li>
-                    <li>
-                        <a href="https://fidesz.hu">Képgaléria</a>
-                    </li>
-                    <li>
-                        <a href="https://www.ocd.bme.hu/wp-content/uploads/2019/03/baranyai_elod_zsolt.png">Média</a>
+                        <a href="table.html">HTML táblázat</a>
                     </li>
                     <li>
                         <a href="gallery.html">Képgaléria</a>
+                    </li>
+                    <li>
+                        <a href="media.html">Média</a>
                     </li>
                 </ul>
                 </li>
@@ -104,6 +110,18 @@
      <footer>
         <h1>&#171;David Danyi&#187;</h1>
         <p>&#169;2025/2026 all rights reserved starfleet industries</p>
-     </footer>
-</body>
-</html>
+    </footer>
+     <button class="open-button" onclick="openForm()">Open Form</button>
+        <div class="form-popup" id="myForm">
+            <form action="" class="form-container">
+                <h1>login</h1>
+                <label for="">Email</label>
+                <input type="text" name="email" placeholder="Enter your email">
+                <label for="">Password</label>
+                <input type="password" name="psw" placeholder="Enter your password">
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+        
